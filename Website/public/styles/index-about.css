@@ -1,0 +1,65 @@
+.about-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0 2.5vw;
+  height: 50vh;
+}
+
+.about-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 2.5vw;
+  width: 75%;
+  text-align: justify;
+  z-index: 301;
+}
+
+.about-description {
+  text-align: justify;
+}
+
+.about-button-holder {
+  margin-top: 15px;
+}
+
+.about-button {
+  color: var(--moss);
+  border-color: var(--moss);
+}
+
+.about-image {
+  position: absolute;
+  top: 0; right: 0;
+  background: red;
+  width: 50%;
+  min-width: 500px;
+  height: 50vh;
+  z-index: 300;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 700px) {
+  .about-holder {
+    margin: 0 25px;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+  }
+
+  .about-content {
+    width: auto;
+    text-align: center;
+  }
+
+  .about-title {
+    display: none;
+  }
+
+  .about-image {
+    display: none;
+  }
+}

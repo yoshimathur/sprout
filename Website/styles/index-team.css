@@ -1,0 +1,111 @@
+.team-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.team-holder-row1 {
+  display: flex;
+  flex-direction: row;
+  gap: calc((100vw - 795px) / 4);
+  padding: 0 calc((100vw - 795px) / 4);
+}
+
+.team-holder-row2 {
+  display: flex;
+  flex-direction: row;
+  gap: calc((100vw - 530px) / 3);
+  padding: 0 calc((100vw - 530px) / 3);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-img-bg {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: var(--moss);
+}
+
+.team-img {
+  position: absolute;
+  top: 15px; left: 15px;
+  width: 250px;
+  height: 350px;
+  background: red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* .Chelsea {
+  background-image: url("/assets/headshots/Chelsea.png");
+}
+
+.Leena {
+  background-image: url("/assets/headshots/Leena.png");
+}
+
+.Khushi {
+  background-image: url("/assets/headshots/Khushi.png");
+}
+
+.Akhil {
+  background-image: url("/assets/headshots/Akhil.png");
+}
+
+.Yash {
+  background-image: url("/assets/headshots/Yash.png");
+} */
+
+.team-name {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.team-title {
+  margin-top: 5px;
+  font-weight: normal; 
+}
+
+.med {
+  display: none;
+}
+
+.small {
+  display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  .large {
+    display: none;
+  }
+
+  .med {
+    display: flex;
+  }
+
+  .team-holder-row1 {
+    gap: calc((100vw - 530px) / 3);
+    padding: 0 calc((100vw - 530px) / 3);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .team-holder-row1 {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0;
+  }
+
+  .team-holder-row2 {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0;
+  }
+}

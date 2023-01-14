@@ -1,0 +1,139 @@
+.header-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 25px 5vw;
+  padding-bottom: 0;
+  width: 90vw;
+  background: var(--cream);
+  border-bottom: solid 2px var(--dark);
+  position: fixed;
+  top: 0;
+  z-index: 998;
+}
+
+.header-title-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--dark);
+}
+
+.header-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  cursor: pointer;
+}
+
+.header-title-right {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.header-profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 12.5px;
+  border: solid 1px var(--dark);
+}
+
+.profile-button-img {
+  height: 20px;
+  width: 20px;
+}
+
+.nav-list-holder {
+  padding: 0;
+}
+
+.nav-list-holder li {
+  display: inline;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .header-holder {
+    gap: 0;
+  }
+
+  .menu-holder {
+    visibility: visible;
+  }
+
+  .nav-list-holder {
+    visibility: collapse;
+    height: 0;
+  }
+
+  .header-title-right {
+    visibility: collapse;
+  }
+}
+
+.splash-holder {
+  position: relative;
+  margin-top: 125px;
+  height: calc(100vh - 125px);
+  min-height: 400px;
+  width: 100vw;
+}
+
+.splash-black-drop {
+  position: absolute;
+  z-index: 300;
+  top: 0px; left: 0; bottom: 0; right: 0;
+  background: var(--dark);
+  opacity: 0.75;
+}
+
+.splash-background {
+  position: absolute;
+  z-index: 200;
+  top: 0px; left: 0; bottom: 0; right: 0;
+  background-image: url('/assets/green-clothes.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.splash-content-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+  position: absolute;
+  z-index: 400;
+  top: 50%; left: 5vw;
+  transform: translateY(-50%);
+  max-width: 35vw;
+}
+
+.splash-get-started-button {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 700px) {
+  .splash-holder {
+    margin-top: 84px;
+    height: calc(100vh - 84px);
+  }
+
+  .splash-content-holder {
+    max-width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .splash-content-holder {
+    max-width: 70vw;
+  }
+}

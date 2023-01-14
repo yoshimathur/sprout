@@ -1,0 +1,149 @@
+:root {
+  --moss: #76934D;
+  --sage: #C2D3AA;
+  --cream: #F5EDE0;
+  --gray: #D5D5D5;
+  --slate: #B0BABF;
+  --dark: #1E1609;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost";
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  color: var(--dark);
+}
+
+h2 {
+  margin: 0;
+  font-size: 40px;
+  color: var(--cream);
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--cream);
+}
+
+h4 {
+  margin: 0;
+  font-size: 25px;
+  color: var(--dark);
+}
+
+h5 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--dark);
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+  color: var(--dark);
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 33px;
+  }
+
+  h2 {
+    font-size: 33px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--moss);
+}
+a:hover {
+  text-decoration: underline;
+}
+.a-black {
+  color: var(--dark);
+}
+.a-button {
+  color: var(--cream);
+  border-radius: 1000px;
+  border: solid 3px var(--cream);
+  padding: 5px 25px;
+  align-self: flex-start;
+  font-size: 20px;
+}
+.a-button:hover {
+  text-decoration: none;
+  color: var(--sage);
+  border-color: var(--sage);
+}
+
+@media only screen and (max-width: 500px) {
+  .a-button {
+    font-size: 18px;
+  }
+}
+
+span {
+  color: var(--sage);
+}
+
+.menu-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  visibility: collapse;
+}
+
+.menu-line {
+  height: 2px;
+  width: 20px;
+  background: var(--dark);
+  border-radius: 1px;
+}
+
+.spacer {
+  height: 150px;
+}
+
+@media only screen and (max-width: 700px) {
+  .spacer {
+    height: 109px;
+  }
+}

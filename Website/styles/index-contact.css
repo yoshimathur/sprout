@@ -1,0 +1,19 @@
+.contact-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 25px;
+  background: var(--moss);
+}
+
+.contact-link {
+  color: var(--cream);
+  text-decoration: underline;
+}
+
+.footer-holder {
+  display: flex;
+  flex-direction: row; 
+}

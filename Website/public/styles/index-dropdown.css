@@ -1,0 +1,54 @@
+.opaque-splash {
+  visibility: collapse;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: black;
+  opacity: 0.75;
+}
+
+.dropdown-holder {
+  visibility: collapse;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 300px;
+  height: 100vh;
+  background: var(--cream);
+  overflow-y: scroll;
+}
+
+.dropdown-nav-holder {
+  position: relative;
+  display: flex;
+  margin: 25px;
+}
+
+.dropdown-buttons-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+}
+
+
+.dropdown-nav-list-holder {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-nav-list-holder li {
+  margin-bottom: 25px;
+}
+
+.list-spacer {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+  .dropdown-holder {
+    width: 100vw;
+  }
+}
