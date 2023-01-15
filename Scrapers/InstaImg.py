@@ -31,7 +31,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 actions = ActionChains(driver)
 driver.get("https://www.instagram.com")
 driver.maximize_window()
-time.sleep(5)
+time.sleep(10)
 
 # locale setup 
 locale.setlocale(locale.LC_ALL, '')
