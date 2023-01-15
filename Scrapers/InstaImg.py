@@ -129,7 +129,9 @@ for link in links:
         time.sleep(3)
 
         # creating docID 
-        docID = ''.join(random.choice(string.ascii_letters) for i in range(8))
+        split = postLink.split("/")
+        index = len(split) - 2
+        docID = split[index]
 
         # data - date, caption, likes, alt
         data = {}
@@ -242,8 +244,6 @@ for link in links:
         # saving data - fade the overrites (too costly)
         db.document(docID).set(data)
 
-
-        
 
 time.sleep(10)
 print("End of script!")
