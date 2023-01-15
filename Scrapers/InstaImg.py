@@ -54,7 +54,7 @@ print("Clicking log in...")
 button = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button")
 button.click()
 print("Clicked log in ...")
-time.sleep(7.5)
+time.sleep(10)
 
 # clearing info dialog
 print("Clearing dialog...")
@@ -63,7 +63,7 @@ for button in buttons:
     if button.get_attribute("innerHTML").strip() == "Not Now":
         button.click()
         print("Cleared dialog...")
-        time.sleep(1)
+        time.sleep(2)
         break
 
 # clearing notification dialog
@@ -72,7 +72,7 @@ for button in buttons:
     if button.get_attribute("innerHTML").strip() == "Not Now":
         button.click()
         print("Cleared dialog...")
-        time.sleep(1)
+        time.sleep(2)
         break
 
 # collecting images from people
@@ -80,7 +80,7 @@ links = ["https://www.instagram.com/kendalljenner/", "https://www.instagram.com/
 
 for link in links:
     driver.get(link)
-    time.sleep(3)
+    time.sleep(5)
 
     # get name
     nametag = driver.find_elements(By.TAG_NAME, "h2")
@@ -99,7 +99,7 @@ for link in links:
     # world won't end if we miss one - instagram dumb too dw 
     while len(postLinks) != postCount: 
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2.5)
+        time.sleep(3)
         postLinks.update(map(lambda x: x.get_attribute("href"), article.find_elements(By.TAG_NAME, "a")))
 
         # Calculate new scroll height and compare with last scroll height
@@ -123,7 +123,7 @@ for link in links:
     for postLink in postLinks: 
         # opening post
         driver.get(postLink)
-        time.sleep(3)
+        time.sleep(5)
 
         # creating docID 
         split = postLink.split("/")
@@ -178,7 +178,7 @@ for link in links:
                     hasNext = isCarousel()
                     if hasNext[0]:
                         hasNext[1].click()
-                        time.sleep(0.5)
+                        time.sleep(1)
                     else: 
                         break 
                 except NoSuchElementException: 
@@ -198,7 +198,7 @@ for link in links:
                         hasNext = isCarousel()
                         if hasNext[0]:
                             hasNext[1].click()
-                            time.sleep(0.5)
+                            time.sleep(1)
                         else: 
                             break 
                     except NoSuchElementException: 
